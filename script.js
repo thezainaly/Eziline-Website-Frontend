@@ -71,3 +71,24 @@ function animateStages() {
 }
 
 animateStages();
+
+
+
+// Locomotive JS code for smooth scrolling
+
+// const scroll = new LocomotiveScroll({
+//   el: document.querySelector('#main'),
+//   smooth: true
+// });
+
+
+// Initialize Lenis
+const lenis = new Lenis();
+
+// Use requestAnimationFrame to continuously update the scroll
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
